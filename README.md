@@ -78,25 +78,38 @@ All these analysis are done using both Python and Power BI. Some of the visuals 
 <img src="Results/Visual_Result_b.PNG"> 
 <img src="Results/Visual_Result_c.PNG"> 
 
-Above visuals are taken from Power BI Visualization tool which provides a bit better clarity when compared to R's ggplot2 library.
+Above visuals are taken from Power BI Visualization tool which provides a bit better clarity and quality when compared to R's ggplot2 library.
 
 ### Regression Results:
 
-Metric Scores for Models | Multiple Linear Regression | Lasso Regression | K-Nearest Neighbor | Random Forest Regression
----                      | --- | --- | --- | ---
-R2 Score                 | 44.7 | 45.3 | 43.4 | 69.6
-Mean Squared Error	 | 60 | 59.3 | 61.4 | 32.9
-Model Score 		 | 44.2 | 44.7 | 52.7 | 95.7
+Multiple Linear Regression: 
 
-These scores are calculated on the basis of usage of Python's scikit-learn library. 
+1. R2 Score: 44.8
+2. P-Value: <2e-16
+
+K-Nearest Neighbor: 
+
+1. R2 Score: 45.2
+2. Root Mean Square Error: 75.8
+3. Mean Absolute Error: 56.8
+
+Random Forest Regressor: 
+
+1. Variance Explained: 71.2
+
+These scores are calculated on the basis of usage of R's caret library. 
 
 To explain the Metrics and their relevance here, the metrics are explained below:
 
 a.) R2 Score/Coefficient of Determination:  Means the % of variation of dependent variable which can be explained by independent variable. More the merrier. 
 
-b.) Mean Squared Error(MSE): MSE measures the average of error squares i.e the average squared difference between the estimated values and true value. Less the better. 
+b.) P-Value: P-value of < 2e-16 means it is highly unlikely that any change in dependent variable due to independent variables is due to chance
 
-c.) Model Score: Comparing the model predicted values to the actual values which we got by test data. More the number of matching values, the better
+c.) Root Mean Squared Error(MSE): RMSE measures the square of average of error squares i.e the average squared difference between the estimated values and true value. Less the better. 
+
+d.) Mean Absolute Error(MAE): Absolute error without considering the error direction
+
+e.) Variance Explained: Amount of variance explained. More the merrier. 
 
   **NOTE:** 
 Please note that these figures and visuals have been taken on 27/8/2021. These may differ from the ones you get once you run this project again as data is scraped again and the whole procedure provides similar yet different results.  
