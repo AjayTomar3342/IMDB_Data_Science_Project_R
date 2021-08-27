@@ -1,4 +1,4 @@
-# IMDB Data Science Project-Python
+# IMDB Data Science Project-R
 Data Science project based on IMDB Data for Data Analysis and Prediction(Movie Score) using Python. 
 
 A personal project made for practising and learning Data Analysis and Data Science Techniques. 
