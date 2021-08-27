@@ -35,21 +35,19 @@ The necessary libraries and packages are specified in the **requirements.txt** f
 
   
   **NOTE:** 
-Since, the libraries used in the project are updated by the original developers regularly, some function/functions may not run as expected. This project will be regularly updated as per the updated libraries requirement, but if project does not run at any give time when you pull the project, it may be due to the library change, rather than a coding issue. This repository is last updated to customize the libraries last on 27/08/2021. 
+Since, the libraries used in the project are updated by the original developers regularly, some function/functions may not run as expected. This project will be regularly updated as per the updated libraries requirement, but if project does not run at any give time when you pull the project, it may be due to the library change, rather than a coding issue. This repository code is last updated to customize the libraries last on 06/07/2021. 
 
 ## Procedure followed in the Project:
 
    * **Step 1:**
-   Data Scraping using Beautiful Soup using Genre Based Movie Links of IMDB. Scraping results are appended   	into Pre-cleaned-file.csv for further processing. 
+   Data Scraping from IMDB done by Python Beautiful Soup. This gives a Pre-cleaned-file.csv which is used      further by R. Then Data Cleaning is done using R's tidyr. This gives R-Cleaned-File.csv. 
    
    * **Step 2:**
-   Data Cleaning is followed then as the data scraped is pretty dirty and needs to be molded into a suitable 	form for Data Analysis. This step takes in Pre-cleaned-file.csv and produces a cleaner Python-cleaned-	    file.csv for Data Analysis. 
+   Data Cleaning is then followed by Data Analysis which uses dplyr for Analysis and ggplot2 for 	      	 Visualization. As a result, Label-Encoded-data.csv file is created which is used for final step: 	      regression. 
   
    * **Step 3:**
-   Taking in Python-cleaned-file.csv, data is analysed on basis of various parameters(mentioned in the 	        Results section below). Using matplotlib, the analysis results are analysed too. Data Visualization is 	    also done using a Visualization Tool(Power BI) which is done using IMDB_Data_Power_BI_file.pbix.
+   Finally, regression of various types such as Multiple Linear Regression, K-Nearest Neighbor and Random      Forest Regression are subjected on the clean data to create a suitable Regression Model for movie rating    score of IMDB movies. 
    
-   * **Step 4:**
-   In the last step, various regression models such as Multiple Linear Regression, Lasso Regression,         	K-Nearest Neighbor and Random Forest Regression. These models are tested upon parameters like R2 Score,      Mean Squared Error and Model Score to evaluate model performance. 
 
   **NOTE:** 
 All csv files mentioned in the above steps are present in the Data_Files folder. Power BI file is present in the Root Folder. 
@@ -76,11 +74,11 @@ Cleaned Data is analyzed on the following parameters:
 
 All these analysis are done using both Python and Power BI. Some of the visuals are shown below: 
 
-<img src="Results/Visual_Result_1.PNG"> 
-<img src="Results/Visual_Result_2.PNG"> 
-<img src="Results/Visual_Result_3.PNG"> 
+<img src="Results/Visual_Result_a.PNG"> 
+<img src="Results/Visual_Result_b.PNG"> 
+<img src="Results/Visual_Result_c.PNG"> 
 
-Above visuals are taken from Power BI Visualization tool which provides better clarity when compared to Python's Matplotlib library.
+Above visuals are taken from Power BI Visualization tool which provides a bit better clarity when compared to R's ggplot2 library.
 
 ### Regression Results:
 
